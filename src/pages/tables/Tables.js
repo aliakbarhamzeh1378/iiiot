@@ -107,6 +107,7 @@ export default function Tables() {
         "email": email,
         "slave_id": slave_id,
         "permission": permission,
+        "password": password,
       }
 
 
@@ -281,7 +282,7 @@ export default function Tables() {
               type="password"
               fullWidth
               variant="standard"
-              value={""}
+              value={password}
               onChange={e => setPassword(e.target.value)}
 
             />
