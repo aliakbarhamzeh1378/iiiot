@@ -103,7 +103,7 @@ export default function Dashboard(props) {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'http://178.63.147.27:8001/api/v1/action/',
+      url: 'http://178.63.147.27:8001/api/v1/action/?sensor_id='+slave_id,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
