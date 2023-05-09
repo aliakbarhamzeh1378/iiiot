@@ -115,11 +115,13 @@ export default function Reports(props) {
   const getData = () => {
     console.log(startDate)
     console.log(startDate)
+    let slave_id = localStorage.getItem('slave_id')
+
     let data = ''
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: "http://178.63.147.27:8001/api/v1/report_data?start="+startDate+"&end="+endDate,
+      url: "http://178.63.147.27:8001/api/v1/report_data?sensor_id="+slave_id+"&start="+startDate+"&end="+endDate,
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
